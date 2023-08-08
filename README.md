@@ -53,3 +53,26 @@ And after executiong the query I see:
 ![BigQuery-–-My-First-Project-–-Console-Google-Cloud](https://github.com/schoto/steam_data_2023/assets/69323411/807ec280-c62c-4615-b19c-a955e637d326)
 
 It means there's no doubles
+
+Now we are going to check if in any columns of our dataset we have NULL values
+
+```
+SELECT
+  COUNTIF(Game_Id IS NULL) AS Game_Id_null_count,
+  COUNTIF(Game_Name IS NULL) AS Game_Name_null_count,
+  COUNTIF(Developer IS NULL) AS Developer_null_count,
+  COUNTIF(Genre IS NULL) AS Genre_null_count,
+  COUNTIF(Publisher IS NULL) AS Publisher_null_count,
+  COUNTIF(Positive IS NULL) AS Positive_null_count,
+  COUNTIF(Negative IS NULL) AS Negative_null_count,
+  COUNTIF(Price IS NULL) AS Price_null_count,
+  COUNTIF(Initial_Price IS NULL) AS Initial_Price_null_count,
+  COUNTIF(Discount IS NULL) AS Discount_null_count,
+  COUNTIF(Languages IS NULL) AS Languages_Price_null_count,
+FROM astral-outpost-382214.steam_data_2023.clean_data_steam;
+```
+
+We have 4 NULL values in all dataset: 1 in Developer column and 3 in Genre column
+
+![Bienvenue-–-My-First-Project-–-Console-Google-Cloud](https://github.com/schoto/steam_data_2023/assets/69323411/3daf17fa-c967-4411-a475-19a9b4c0f006)
+
