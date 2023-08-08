@@ -76,3 +76,43 @@ We have 4 NULL values in all dataset: 1 in Developer column and 3 in Genre colum
 
 ![Bienvenue-–-My-First-Project-–-Console-Google-Cloud](https://github.com/schoto/steam_data_2023/assets/69323411/3daf17fa-c967-4411-a475-19a9b4c0f006)
 
+It's time to check what is missing I.e. for what games
+
+First I will check for Developer NULL column
+```
+SELECT
+Game_name
+FROM
+astral-outpost-382214.steam_data_2023.clean_data_steam
+WHERE Developer IS NULL;
+```
+Result:
+
+![Bienvenue-–-My-First-Project-–-Console-Google-Cloud (1)](https://github.com/schoto/steam_data_2023/assets/69323411/12e9360f-125b-41a8-a904-e5b02551879a)
+
+Then for Genre NULL column
+
+```
+SELECT
+Game_name
+FROM
+astral-outpost-382214.steam_data_2023.clean_data_steam
+WHERE Genre IS NULL;
+```
+Result:
+
+![Bienvenue-–-My-First-Project-–-Console-Google-Cloud (2)](https://github.com/schoto/steam_data_2023/assets/69323411/a2f51d62-a37b-4d0a-aa47-351ae141d2e9)
+
+We have **Portal 2 Sixense Perceptual Pack** without Developer mentioned
+and we have the same **Portal 2 Sixense Perceptual Pack** , **Middle-earth: Shadow of Mordor** and **The Elder Scrolls IV: Oblivion Game of the Year Edition Deluxe** without any genres
+
+After quick search on the internet I found that **Portal 2 Sixense Perceptual Pack** is developed by Sixense. <br/>
+
+Also genres for games I mentioned earlier are the following: <br/>
+
+Portal 2 Sixense Perceptual Pack - Adventure, Action <br/>
+Middle-earth: Shadow of Mordor - Open World, Action, Fantasy, Adventure, RPG <br/>
+The Elder Scrolls IV: Oblivion Game of the Year Edition Deluxe - RPG, Fantasy, Open World, Adventure, Action
+
+Now it's time to update these values
+
