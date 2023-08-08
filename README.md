@@ -116,3 +116,56 @@ The Elder Scrolls IV: Oblivion Game of the Year Edition Deluxe - RPG, Fantasy, O
 
 Now it's time to update these values
 
+Starting with missing Developer
+```
+UPDATE `astral-outpost-382214.steam_data_2023.clean_data_steam`
+SET Developer = 'Sixense'
+WHERE Game_Name = 'Portal 2 Sixense Perceptual Pack' AND Developer IS NULL;
+```
+Quick check
+```
+SELECT Game_name, Developer
+FROM astral-outpost-382214.steam_data_2023.clean_data_steam
+WHERE Game_Name = 'Portal 2 Sixense Perceptual Pack'
+```
+We updated it
+
+![Bienvenue-–-My-First-Project-–-Console-Google-Cloud (3)](https://github.com/schoto/steam_data_2023/assets/69323411/62248a33-27f4-44d9-9988-62b8915b5aeb)
+
+Now missing Genres for 3 games
+```
+UPDATE `astral-outpost-382214.steam_data_2023.clean_data_steam`
+SET Genre = 'Adventure, Action'
+WHERE Game_Name = 'Portal 2 Sixense Perceptual Pack' AND Genre IS NULL;
+
+UPDATE `astral-outpost-382214.steam_data_2023.clean_data_steam`
+SET Genre = 'Open World, Action, Fantasy, Adventure, RPG'
+WHERE Game_Name = 'Middle-earth: Shadow of Mordor' AND Genre IS NULL;
+
+UPDATE `astral-outpost-382214.steam_data_2023.clean_data_steam`
+SET Genre = 'RPG, Fantasy, Open World, Adventure, Action'
+WHERE Game_Name = 'The Elder Scrolls IV: Oblivion Game of the Year Edition Deluxe' AND Genre IS NULL;
+```
+Quick check
+```
+SELECT Game_Name, Genre
+FROM astral-outpost-382214.steam_data_2023.clean_data_steam
+WHERE Game_name = 'Portal 2 Sixense Perceptual Pack';
+
+SELECT Game_Name, Genre
+FROM astral-outpost-382214.steam_data_2023.clean_data_steam
+WHERE Game_name = 'Middle-earth: Shadow of Mordor';
+
+SELECT Game_Name, Genre
+FROM astral-outpost-382214.steam_data_2023.clean_data_steam
+WHERE Game_name = 'The Elder Scrolls IV: Oblivion Game of the Year Edition Deluxe';
+```
+Result:
+
+![11](https://github.com/schoto/steam_data_2023/assets/69323411/9c78b196-06d1-4046-b4b1-968921afc72e)
+
+![22](https://github.com/schoto/steam_data_2023/assets/69323411/adb8ef57-9df4-45ec-81cf-7e9032cbc6ea)
+
+![33](https://github.com/schoto/steam_data_2023/assets/69323411/06d53996-2999-4d13-9657-7a4352255aa2)
+
+
