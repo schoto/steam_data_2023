@@ -168,4 +168,6 @@ Result:
 
 ![33](https://github.com/schoto/steam_data_2023/assets/69323411/06d53996-2999-4d13-9657-7a4352255aa2)
 
+Our dataset is up to date and clean now. There was no a lot of work, but it's crucial to have clean and accurate data
 
+<h2>Thank you for reading me!</h2>
